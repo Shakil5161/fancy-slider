@@ -27,7 +27,10 @@ img {
   height: 400px;
   object-fit: cover;
 }
-
+.slider-img img{
+  height: 100px;
+  object-fit: cover;
+}
 .prev-next {
   position: absolute;
   top: 50%;

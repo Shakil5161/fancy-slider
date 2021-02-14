@@ -91,7 +91,7 @@ const createSlider = () => {
     sliderContainer.appendChild(item);
 
     const selectImgs = document.createElement('div');
-    selectImgs.className = "col-lg-3 col-md-4 col-xs-6 img-item mb-2 p-0 ";
+    selectImgs.className = "col-lg-1 col-md-1 col-xs-1 img-item mb-2 p-0 slider-img ";
     selectImgs.innerHTML = `<img class="w-20 img-fluid img-thumbnail"
     src="${slide}"
     alt="">`;
