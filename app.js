@@ -81,6 +81,7 @@ const createSlider = () => {
   const duration = document.getElementById('duration').value || 1000;
 
   const selectImgForSlide = document.getElementById('select-img-for-slide');
+  selectImgForSlide.innerHTML= '';
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
