@@ -79,13 +79,22 @@ const createSlider = () => {
   // hide image aria
   imagesArea.style.display = 'none';
   const duration = document.getElementById('duration').value || 1000;
+
+  const selectImgForSlide = document.getElementById('select-img-for-slide');
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
     item.innerHTML = `<img class="w-100"
     src="${slide}"
     alt="">`;
-    sliderContainer.appendChild(item)
+    sliderContainer.appendChild(item);
+
+    const selectImgs = document.createElement('div');
+    selectImgs.className = "col-lg-3 col-md-4 col-xs-6 img-item mb-2 p-0 ";
+    selectImgs.innerHTML = `<img class="w-20 img-fluid img-thumbnail"
+    src="${slide}"
+    alt="">`;
+    selectImgForSlide.appendChild(selectImgs);
   })
   changeSlide(0)
   timer = setInterval(function () {
@@ -139,5 +148,3 @@ const toggleSpinner = () => {
   spinner.classList.toggle('d-none');
   imgSection.classList.toggle('d-none');
 }
-
-
